@@ -6,7 +6,9 @@ require 'omniauth-github'
 require 'dotenv'
 Dotenv.load
 
-require 'pry'
+configure :development do
+  require 'pry'
+end
 
 configure do
   enable :sessions
