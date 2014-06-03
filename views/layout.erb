@@ -6,6 +6,16 @@
 </head>
 <body>
 
+<% if signed_in? %>
+  <p>
+    Signed in as <%= current_user %>.
+    <a href="/sign_out">Sign out</a>
+  </p>
+<% end %>
+
+
+<%= styled_flash %>
+
 <%= yield %>
 
 </body>
