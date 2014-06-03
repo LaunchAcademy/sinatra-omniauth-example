@@ -8,7 +8,8 @@
 
 <% if signed_in? %>
   <p>
-    Signed in as <%= current_user %>.
+    <img src="<%= current_user.avatar_url %>">
+    Signed in with <%= current_user.provider.capitalize %> as <%= current_user.email %>.
     <a href="/sign_out">Sign out</a>
   </p>
 <% end %>
